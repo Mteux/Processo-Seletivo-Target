@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+
+    <script>
+        function fibonacci() {
+            //Recuperamos o valor digitado e realizamos a conversão para inteiro
+            var numero = parseInt(document.getElementById('numero').value);
+            var termo1 = 0, termo2 = 1, termo3 = 0;
+            
+            //utilizando o laço para a soma dos valores e realizar a sequencia Finonacci
+            while (numero > termo3) {
+                termo3 = termo1 + termo2
+                termo1 = termo2
+                termo2 = termo3
+
+                
+            }
+
+            //utilizamos a condição do IF para verificar se o numero esta na sequencia
+            if(numero == 0 || numero == 1 || numero == termo3) {
+                    alert("O numero faz parte da sequência de Fibonacci!")
+            } else {
+                    alert("O número digitado não faz parte da sequência de Finonacci!")
+            }
+            
+        }
+    </script>
+</head>
+<body>
+
+    Digite um numero: <input id="numero" type="number"> <br>
+    <button onclick="fibonacci()">Exibir</button>
+    
+</body>
+</html>
